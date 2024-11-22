@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">iPurchase</string>
+
+    <string name="lorem_ipsium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl nisl, eleifend bibendum eleifend sagittis, commodo in enim. Integer ornare nec libero sed cursus. Praesent ultricies ac erat sit amet maximus. Quisque consequat enim eget arcu malesuada maximus. Phasellus semper maximus vestibulum. Vivamus nec odio eget tortor rhoncus tincidunt. Ut auctor eu est non posuere. Curabitur risus justo, malesuada a lorem vel, pharetra varius urna.</string>
+    <string name="lorem_ipsium_">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl nisl, eleifend bibendum eleifend sagittis, commodo in enim.</string>
+
+    <string name="title_1">Browse Products</string>
+    <string name="title_2">AI/ML Analysis</string>
+    <string name="title_3">Purchase Advice</string>
+
+    <string name="description_1">Revolutionize the way you shop! \nSelect products of interest and get real-time insights from our expert analysis of social review sentiments, to make informed decisions.</string>
+    <string name="description_2">Say goodbye to buyer\'s remorse! \niPurchase analyzes thousands of tweets to give a clear picture of customer satisfaction, to make confident purchase decisions.</string>
+    <string name="description_3">Unlock the power of social proof! \nReceive an IP Score \u2122 and expert purchase advice based on analyzed social review sentiments of products you\'re interested in.</string>
+
+    <string name="start">Start</string>
+    <string name="clear">clear</string>
+    <string name="cancel">Cancel</string>
+    <string name="view_product_on_website">View product on website</string>
+    <string name="released_on">Released on %s</string>
+    <string name="colors">Colors</string>
+    <string name="starts_from">Starts from</string>
+    <string name="get_rating">Get Rating</string>
+    <string name="limit_remaining">limit: %1$s, remaining: %2$s</string>
+    <string name="score_generated_from">IP Score generated from \n%s tweets</string>
+    <string name="view_tweets">Click to view tweets</string>
+    <string name="frequent_words">Frequently mentioned words</string>
+    <string name="purchase_advice">Purchase advice</string>
+    <string name="report_is_ready">Hooray, Report is ready!!</string>
+    <string name="report_is_ready_">Hooray!\nReport is ready.</string>
+    <string name="report_not_generated">Oops! No results found.\nReport couldn\'t be generated.\nRefine keyphrase and try again.</string>
+    <string name="report_complete">Report complete</string>
+    <string name="no_tweets_available">No tweets available!</string>
+    <string name="view_report">View Report</string>
+    <string name="view_now">View Now</string>
+    <string name="view">View</string>
+    <string name="close">Close</string>
+    <string name="okay">Okay!</string>
+    <string name="buy_now">Buy Now</string>
+
+    <string-array name="loading">
+        <item>Buckle up</item>
+        <item>Retrieving comments</item>
+        <item>Hang tight, iPurchase engine processing details</item>
+        <item>Analysing sentiments, woah that\'s a lot</item>
+        <item>Almost there, who knew people had so many opinions</item>
+        <item>Formatting feedback, report almost ready</item>
+        <item>Engine, doing the most here.</item>
+        <item>Engine, doing the most here.</item>
+        <item>Engine, doing the most here.</item>
+        <item>Engine, doing the most here.</item>
+        <item>Engine, doing the most here.</item>
+        <item>Engine, doing the most here.</item>
+        <item>Engine, doing the most here.</item>
+        <item>Engine, doing the most here.</item>
+        <item>Amazing! Report is ready</item>
+    </string-array>
+
+</resources>

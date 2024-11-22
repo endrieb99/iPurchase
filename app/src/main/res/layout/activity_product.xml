@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:elevation="0dp"
+        app:layout_collapseMode="pin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="12dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="10dp"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/titleCollapsed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/open_sans_bold"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/dotsIndicator"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/gradient_view"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dotsIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:dotsColor="@color/colorSecondaryDark"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="6dp"
+        app:dotsSpacing="3dp"
+        app:dotsWidthFactor="2.5"
+        app:layout_constraintBottom_toTopOf="@id/content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:progressMode="false"
+        app:selectedDotColor="@color/colorPrimaryDark" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/gradient_view_reverse"
+        app:layout_constraintBottom_toTopOf="@+id/content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSecondary"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_extra_bold"
+            android:gravity="center"
+            android:text="Samsung Galaxy S22 Ultra"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/releaseDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/open_sans_italic"
+            android:gravity="center"
+            android:text="Released on 12th Mar 2020"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name" />
+
+        <LinearLayout
+            android:id="@+id/colorsLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_fafafa"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/releaseDate">
+
+            <TextView
+                android:id="@+id/colorsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans_semi_bold_italic"
+                android:text="@string/colors"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:id="@+id/colorsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/background_fafafa">
+
+                <com.mikhaellopez.circleview.CircleView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:elevation="5dp"
+                    app:cv_border_color="#000000"
+                    app:cv_border_width="0dp"
+                    app:cv_color="@color/red"
+                    app:cv_shadow="true"
+                    app:cv_shadow_color="@color/red"
+                    app:cv_shadow_radius="5" />
+
+                <com.mikhaellopez.circleview.CircleView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:cv_border_color="#000000"
+                    app:cv_border_width="0dp"
+                    app:cv_color="@color/green"
+                    app:cv_shadow="true"
+                    app:cv_shadow_color="@color/green"
+                    app:cv_shadow_radius="5" />
+
+                <com.mikhaellopez.circleview.CircleView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:cv_border_color="#000000"
+                    app:cv_border_width="0dp"
+                    app:cv_color="@color/white"
+                    app:cv_shadow="true"
+                    app:cv_shadow_color="@color/colorPrimaryDark"
+                    app:cv_shadow_radius="5" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/startsFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_italic"
+            android:text="@string/starts_from"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@+id/price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/buttonAction"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans_extra_bold_italic"
+            android:text="€ 900.00"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonAction"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/startsFrom" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonAction"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/colorAccent"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/get_rating"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:cornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/colorsLayout"
+            app:layout_constraintWidth_percent="0.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSecondary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <me.ibrahimsn.particle.ParticleView
+            android:id="@+id/particleView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="-10dp"
+            app:layout_constraintBottom_toTopOf="@+id/cancelButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:particleColor="@color/colorPrimary"
+            app:particleCount="60"
+            app:particleLineColor="@color/colorPrimary"
+            app:particleLinesEnabled="true"
+            app:particleMaxRadius="6"
+            app:particleMinRadius="3"
+            app:particlesBackgroundColor="@color/colorSecondary" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/emptyList"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@drawable/circle_color_secondary"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/fadingTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="loading.json"
+            app:lottie_loop="false"
+            app:lottie_repeatCount="100" />
+
+        <com.scally_p.ipurchase.ui.view.FadingTextView
+            android:id="@+id/fadingTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginEnd="75dp"
+            android:background="@drawable/background_color_secondary"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:gravity="center_horizontal"
+            android:lines="3"
+            android:paddingTop="30dp"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/cancelButton"
+            app:layout_constraintTop_toBottomOf="@+id/emptyList"
+            app:texts="@array/loading"
+            app:timeout="4000" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancelButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/open_sans_bold"
+            android:minWidth="150dp"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:cornerRadius="25dp"
+            app:layout_constraintBottom_toTopOf="@+id/viewProduct"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewProduct"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:minWidth="150dp"
+            android:text="@string/view_product_on_website"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            app:cornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="2dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loadingCompleteLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loadingComplete"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toTopOf="@+id/loadingCompleteMessage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="loading_complete.json"
+            app:lottie_loop="false"
+            app:lottie_repeatCount="0" />
+
+        <TextView
+            android:id="@+id/loadingCompleteMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/open_sans_semi_bold"
+            android:gravity="center"
+            android:text="@string/report_is_ready_"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/loadingCompleteButton"
+            app:layout_constraintTop_toBottomOf="@+id/loadingComplete" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loadingCompleteButton"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="@font/open_sans_bold"
+            android:minWidth="150dp"
+            android:text="@string/view_report"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:cornerRadius="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/webViewLayout"
+        layout="@layout/layout_webview" />
+</androidx.constraintlayout.widget.ConstraintLayout>
